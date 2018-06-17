@@ -3,26 +3,30 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { EditprofPage } from '../pages/editprof/editprof';
+import { RatePage } from '../pages/rate/rate';
+import { MyticketsPage } from '../pages/mytickets/mytickets';
+import { HelpPage } from '../pages/help/help';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = EditprofPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ icon: string, title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { icon: 'cart', title: 'My Tickets', component: MyticketsPage },
+      { icon: 'person', title: 'Edit Profile', component: EditprofPage },
+      { icon: 'star-half', title: 'Rate Us', component: RatePage },
+      { icon: 'help-circle', title: 'Help', component: HelpPage },
     ];
 
   }

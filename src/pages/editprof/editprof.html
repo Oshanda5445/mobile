@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar >
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="head">
+  <h4 >Edit Basic Details</h4>
+  	<ion-list no-lines>
+	  	<ion-item class="head">
+	    	<ion-input  type="text" placeholder="Name"></ion-input>
+	  	</ion-item>
+	  	<ion-item class="head">
+	    	<ion-input type="text" placeholder="User Name"></ion-input>
+	  	</ion-item >
+	  	<ion-item class="head">
+	    	<ion-input type="text" placeholder="Mobile"></ion-input>
+			</ion-item>
+			<ion-item class="head"></ion-item>
+		</ion-list>
+		
+  <h4>Edit Confidential Details</h4>
+  	<button ion-button class="button" class="up" color="dark" >Credit Card Details</button>
+  	<button ion-button class="button" color="dark" (click)="goToSecondPage()">Edit Password</button>
+    
+</ion-content>
